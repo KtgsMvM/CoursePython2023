@@ -1,14 +1,9 @@
 # TODO Найдите количество книг, которое можно разместить на дискете
-a = 1.44
-b = 100
-c = 50
-d = 25
-f = 4
+volume_disk = 1.44
+page = 100
+row_page = 50
+simv_row = 25
+one_simv = 4
 var_= 1024
-disk_ = float(a)
-kol_ctn = int(b)
-kol_ctk = int(c)
-cimv_ctk = int(d)
-inf_cimv = int(f)
-book_ = int(disk_//((kol_ctn * kol_ctk * cimv_ctk * inf_cimv)/var_**2))
+book_ = int(volume_disk//((page * row_page * simv_row * one_simv)/var_**2))
 print("Количество книг, помещающихся на дискету:",book_)
