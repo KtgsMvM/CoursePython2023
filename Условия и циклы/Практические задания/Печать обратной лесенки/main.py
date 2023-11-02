@@ -1,4 +1,7 @@
-count_stairs =4 # TODO распечатать лесенку
-for i in range(count_stairs, 1):
-    print(f"{'*':<5 * i:<={count_stairs}})
+count_stairs
+
+
+    w = 5 # TODO распечатать лесенку
+for i in range(1, w - 1):
+    print("*" * i + (" " * (w - 1))
 
