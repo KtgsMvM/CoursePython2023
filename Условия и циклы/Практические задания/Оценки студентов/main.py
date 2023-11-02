@@ -8,3 +8,7 @@ students = [
 ]
 
 # TODO Распечатать имена студентов с оценками выше тройки
+for line in students:
+    if line['grade'] > 3:
+        # print(f"{line['name']}. Оценка: {line['grade']}")
+        print(line['name'], ". Оценка: ", line['grade'], sep="")
