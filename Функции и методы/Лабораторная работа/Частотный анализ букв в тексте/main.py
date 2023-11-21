@@ -41,3 +41,36 @@ main_str = """
 """
 
 # TODO Распечатайте в столбик букву и её частоту в тексте
+
+dict = {}  #cоздаем словарь, считаем сколько всего букв в тексте,
+          # исключая знаки препинания
+sum = 0
+for i in main_str:
+  if i.isalpha():
+    sum += 1
+
+
+def count_letters(text, dict):# считаем сколько раз каждая буква встречается в тексте в тексте
+  text = text.lower()  # пусть все буквы в тексте будут строчными
+  for i in text:
+    if i.isalpha():
+      if i in dict:
+        dict[i] += 1
+      else:
+        dict[i] = 1
+  return dict  # полученный результат записываем в новый словарь
+
+
+dict_letters = count_letters(main_str, dict)
+
+def calculate_frequency(dict, sum): # считаем частоту использования букв в тексте
+  keys = list(dict)  # ключами словаря являются буквы
+  for i in keys:
+    dict[i] = round(dict[i] / sum, 2) # считаем частоту использования каждой буквы
+  return dict
+
+dict_frequency = calculate_frequency(dict_letters, sum)
+# записываем в новый словарь
+for i in list(dict_frequency):
+  print(f"{i}: {dict_frequency[i]}")
+  # для вывода информации используем f строку
