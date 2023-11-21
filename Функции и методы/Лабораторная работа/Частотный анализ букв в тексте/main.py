@@ -66,11 +66,11 @@ dict_letters = count_letters(main_str, dict)
 def calculate_frequency(dict, sum): # считаем частоту использования букв в тексте
   keys = list(dict)  # ключами словаря являются буквы
   for i in keys:
-    dict[i] = round(dict[i] / sum, 2) # считаем частоту использования каждой буквы
+    dict[i] = dict[i] / sum # считаем частоту использования каждой буквы
   return dict
 
 dict_frequency = calculate_frequency(dict_letters, sum)
 # записываем в новый словарь
 for i in list(dict_frequency):
-  print(f"{i}: {dict_frequency[i]}")
+  print(f"{i}: {dict_frequency[i]:.2f}")
   # для вывода информации используем f строку
